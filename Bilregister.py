@@ -27,8 +27,12 @@ class Car():
     def set_color(self, new_color):
         self.color = new_color
 
+    def set_mileage(self, new_mileage):
+        self.mileage = new_mileage
+        
+
     def get_mileage(self):
-        print(self.mileage)
+        return(self.mileage)
 
 
 # ----------Huvudprogram----------
@@ -41,3 +45,18 @@ a_car.get_brand()
 b_car = Car("Lamborgini", "Grön", 209873)
 b_car.get_brand()
 print(a_car.color)
+the_mileage = a_car.get_mileage()
+c_car = Car('Dodge', 'röd', 7500)
+d_car = Car('Masta', 'gul', 6000)
+
+
+my_cars = [a_car, b_car, c_car, d_car]
+my_cars_values = []
+
+
+for a in range(0, len(my_cars)):
+    my_cars_values.append(my_cars[a].brand)
+    my_cars_values.append(my_cars[a].color)
+    my_cars_values.append(my_cars[a].mileage)
+
+
